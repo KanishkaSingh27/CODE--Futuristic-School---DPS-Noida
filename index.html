@@ -3,25 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Smooth Moving Wave</title>
+  <title>NeuroWave Academy</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
- 
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+         
 </head>
 <body>
- 
-<div class="wave-container">
-  <svg viewBox="0 0 2400 150" preserveAspectRatio="none">
-    <path id="wave1" d="" />
-    <path id="wave2" d="" />
-    <path id="wave3" d="" />
-    <path id="wave4" d="" />
-  </svg>
-</div>
+  <div id="particles-js"><canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="937"
+    height="1193"></canvas></div>
+  <script>
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("topnav");
 
-<script>
-const wave1 = document.getElementById('wave1');
+    function myFunction() {
+var x = document.getElementById("myTopnav");
+if (x.className === "topnav") {
+x.className += " responsive";
+} else {
+x.className = "topnav";
+}
+}
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load("particles-js", "particles.json", function () {
+            console.log("yeah");
+        });
+</script>        
+
+  <!-- Navbar Section -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="AquaNova" />
+    </div>
+    <div class="navMenu">
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#abt">About</a>
+        <a href="#testimonial">Testimonials</a>
+        <a href="#contact">Contact</a>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </nav>
+ 
+    
+ <section id="home">
+  <div class="hero">
+    <div class="typewriter">
+      Ride the wave of Innovation
+    </div><a href="#abt" style="text-decoration: none;;">
+    <button >
+      Learn More <i class="fa-solid fa-chevron-down"></i>
+  </button></a>
+  </div>
+  
+  <div class="wave-container">
+    <svg viewBox="0 0 2400 150" preserveAspectRatio="none">
+      <path id="wave1" d="" />
+      <path id="wave2" d="" />
+      <path id="wave3" d="" />
+      <path id="wave4" d="" />
+    </svg>
+  </div>
+  <script>
+  const wave1 = document.getElementById('wave1');
 const wave2 = document.getElementById('wave2');
 const wave3 = document.getElementById('wave3');
 const wave4 = document.getElementById('wave4');
@@ -57,12 +109,200 @@ function drawWave() {
 
 drawWave();
 </script>
-<nav class="navMenu">
-  <a href="#">Home</a>
-  <a href="#">gtht</a>
-  <a href="#">ghtrh</a>
-  <a href="#">ghrth</a>
-  <div class="dot"></div>
-</nav>
+</section>
+<section id="abt">
+  <center><div class="bg"><h1 class="h1-1">About Us</h1></div></center>
+  
+
+<center>
+<div class="flex-container-1">
+    <div class="flex-1">
+      
+      <h2 class="one">Futuristic Campuses :</h2>
+      <p class="text">
+        In 2050, our schools will blend smart, eco-friendly campuses with advanced technology.
+        AI will manage everything from energy use to student well-being.
+        Teachers and students will interact with a mix of physical and digital tools.
+        The campus will foster creativity, innovation, and practical learning.   </div>
+    <div class="flex-1">
+      <h2 class="one">AR/VR Labs :</h2>
+    <p class="text">
+      AR and VR labs will take students on virtual field trips and hands-on learning experiences.
+      Imagine exploring ancient civilizations in virtual reality.
+      Science experiments will be conducted in immersive, digital environments.
+      Learning will become an exciting adventure that sparks curiosity and creativity.    </div>
+    <div class="flex-1">
+      <h2 class="one">
+        Hologram & AI Teachers :</h2>
+    <p class="text">
+      Teachers will be enhanced with AI, adapting lessons based on student mood and progress.
+      Holograms will bring global experts into the classroom for dynamic learning.
+      Personalized education will ensure every student gets the attention they need.
+      Emotion-detecting technology will create more connected and engaging learning experiences.    </div>      
+  </div>
+
+</center>
+</section>
+<section id="testimonial">
+  <center><div class="bg"><h1 class="h1-1">Student Testimonials</h1></div></center>
+  
+
+<center>
+  <div class="carousel-container">
+    <button class="carousel-arrow left-arrow" id="left-arrow">&#10094;</button>
+    <div class="carousel">
+      <div class="testimonial-card">
+        <p class="testimonial-text">"This school gave me the tools to explore AI and build my career in technology!"</p>
+        <h3>Jane Doe</h3>
+        <p>Data Analyst</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">"Learning through AR/VR was an amazing experience that changed how I approach education."</p>
+        <h3>John Smith</h3>
+        <p>Data Science Student</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">"The future-ready curriculum and hands-on learning truly prepared me for the industry!"</p>
+        <h3>Emily Davis</h3>
+        <p>Environmental Scientist</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">"The AI-powered classroom with emotion-detecting teachers made learning so much more effective!"</p>
+        <h3>Michael Lee</h3>
+        <p>Cyber Security Student</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">"The virtual reality labs took my learning to the next level, blending the physical and digital worlds!"</p>
+        <h3>Sarah Green</h3>
+        <p>Virtual Reality Designer</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">"The hybrid classrooms with real-time holograms truly made me feel like I was learning anywhere!"</p>
+        <h3>Daniel Kim</h3>
+        <p>Space Engineering Student</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">"With emotion-detecting AI tutors, the personalized learning experience was beyond expectations!"</p>
+        <h3>Laura Adams</h3>
+        <p>Psychology Student</p>
+      </div>
+    </div>
+    <button class="carousel-arrow right-arrow" id="right-arrow">&#10095;</button>
+  </div>
+</section>
+<script>
+const carousel = document.querySelector('.carousel');
+const leftArrow = document.getElementById('left-arrow');
+const rightArrow = document.getElementById('right-arrow');
+const cards = document.querySelectorAll('.testimonial-card');
+
+// Function to set the active class to the center card
+function setActiveCard() {
+  let centerCard = null;
+  let closestDistance = Infinity;
+  
+  cards.forEach(card => {
+    const cardRect = card.getBoundingClientRect();
+    const cardCenter = cardRect.left + cardRect.width / 2;
+    const carouselCenter = carousel.getBoundingClientRect().left + carousel.clientWidth / 2;
+    const distance = Math.abs(carouselCenter - cardCenter);
+    
+    if (distance < closestDistance) {
+      closestDistance = distance;
+      centerCard = card;
+    }
+  });
+
+  cards.forEach(card => {
+    card.classList.remove('active'); // Remove active class from all cards
+  });
+
+  if (centerCard) {
+    centerCard.classList.add('active'); // Add active class to the closest card
+  }
+}
+
+// Initialize the carousel with the center card active
+setActiveCard();
+
+// Add event listener for scroll to update the center card
+carousel.addEventListener('scroll', () => {
+  setActiveCard();
+});
+
+// Add event listeners for left and right arrows
+leftArrow.addEventListener('click', () => {
+  carousel.scrollBy({
+    left: -carousel.clientWidth / 3, // Adjust the number to control the scroll distance
+    behavior: 'smooth'
+  });
+});
+
+rightArrow.addEventListener('click', () => {
+  carousel.scrollBy({
+    left: carousel.clientWidth / 3, // Adjust the number to control the scroll distance
+    behavior: 'smooth'
+  });
+});
+
+</script>
+<section id="contact">
+  <center><div class="bg"><h1 class="h1-1">Contact Us</h1></div></center>
+  
+
+  <center>
+  <div class="container">
+    <form action="/action_page.php">
+      <label for="fname">Full Name</label>
+      <input type="text" id="fname" name="Fullname" placeholder="Your name..">
+  
+      <label for="email">Email ID</label>
+      <input type="text" id="email" name="email" placeholder="Your Email ID..">
+  
+      <label for="members">Phone Number</label>
+      <input type="number" value="none" placeholder="Your Phone Number..">
+      <label for="subject">Subject</label>
+      
+    
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+    
+    <br>
+      <input type="Submit" value="Submit">
+    </form>
+  </div>
+</section>
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-chevron-up"></i></button>
+<script>
+feather.replace()
+</script>
+<script>
+mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+mybutton.style.display = "block";
+} else {
+mybutton.style.display = "none";
+}
+}
+
+function topFunction() {
+document.body.scrollTop = 0; 
+document.documentElement.scrollTop = 0; 
+}
+</script>
+<footer>
+<center>
+
+<hr color="#6be6f7" style="margin-top:60px;">
+<p style="font-family: 'poppins',sans-serif;font-size:20px;">
+  &copy; Published by NeuroWave Academy Team 
+   
+</p>
+</footer></center>
+</section>
 </body>
 </html>
