@@ -121,7 +121,7 @@ body {
   color: #00ffff;
   font-size: 6em; /* Larger font size */
   overflow: hidden;
-  white-space: nowrap;
+  #E3E7D3-space: nowrap;
   border-right: .15em solid #00ffff;
   animation: typing 4s steps(30, end) forwards, blink-caret 0.75s step-end infinite 4s;
   margin: 0; /* Remove any default margin */
@@ -430,7 +430,7 @@ flex: calc(33.333% - 24px);
 
 .testimonial-card {
   flex: 0 0 20%; /* Adjust card width */
-  background-color: white;
+  background-color: #E3E7D3;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 30px;
@@ -478,7 +478,7 @@ p {
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: #E3E7D3;
   font-size: 2rem;
   padding: 10px;
   border: none;
@@ -582,7 +582,7 @@ background-size: 40px 40px;
   border: none; 
   outline: none; 
   background-color: #6be6f7; 
-  color: white; 
+  color: #E3E7D3; 
   cursor: pointer; 
   padding: 10px; 
   border-radius: 5px; 
