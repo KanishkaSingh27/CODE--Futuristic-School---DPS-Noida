@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smooth Moving Wave</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+ 
+  
+</head>
+<body>
+ 
+<div class="wave-container">
+  <svg viewBox="0 0 2400 150" preserveAspectRatio="none">
+    <path id="wave1" d="" />
+    <path id="wave2" d="" />
+    <path id="wave3" d="" />
+    <path id="wave4" d="" />
+  </svg>
+</div>
+
+<script>
+const wave1 = document.getElementById('wave1');
+const wave2 = document.getElementById('wave2');
+const wave3 = document.getElementById('wave3');
+const wave4 = document.getElementById('wave4');
+
+let t = 0;
+
+function drawWave() {
+  let d1 = "M 0 75 ";
+  let d2 = "M 0 75 ";
+  let d3 = "M 0 75 ";
+  let d4 = "M 0 75 ";
+
+  for (let x = 0; x <= 2400; x += 50) {
+    let y1 = 75 + Math.sin((x + t) * 0.008) * 20;   // fast small
+    let y2 = 75 + Math.sin((x + t * 0.6) * 0.006) * 25; // mid fast
+    let y3 = 75 + Math.sin((x + t * 0.4) * 0.004) * 30; // slow medium
+    let y4 = 75 + Math.sin((x + t * 0.2) * 0.002) * 35; // ultra slow big
+
+    d1 += `L ${x} ${y1} `;
+    d2 += `L ${x} ${y2} `;
+    d3 += `L ${x} ${y3} `;
+    d4 += `L ${x} ${y4} `;
+  }
+
+  wave1.setAttribute('d', d1);
+  wave2.setAttribute('d', d2);
+  wave3.setAttribute('d', d3);
+  wave4.setAttribute('d', d4);
+
+  t += 2;
+  requestAnimationFrame(drawWave);
+}
+
+drawWave();
+</script>
+<nav class="navMenu">
+  <a href="#">Home</a>
+  <a href="#">gtht</a>
+  <a href="#">ghtrh</a>
+  <a href="#">ghrth</a>
+  <div class="dot"></div>
+</nav>
+</body>
+</html>
