@@ -379,10 +379,13 @@ flex: calc(33.333% - 24px);
         .h1-1{
           font-size: 25px;
           margin-bottom: 70px;
-          margin: auto;
+          margin: auto;}
+        .bg{
+          padding: 15px;
+        }
         }
        
-    }
+    
     .line{
         letter-spacing: 1.3px;
         font-size: 30px;
@@ -421,11 +424,13 @@ flex: calc(33.333% - 24px);
 .carousel {
   display: flex;
   gap: 50px;
-  overflow-x: hidden; /* Hide the scrollbar */
+  overflow-x: auto; /* Hide the scrollbar */
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   justify-content: center; /* Center the content */
   scroll-behavior: smooth;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
 }
 
 .testimonial-card {
@@ -435,9 +440,16 @@ flex: calc(33.333% - 24px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 30px;
   text-align: center;
+  min-width:300px;
   scroll-snap-align: center;
+  
   transition: transform 0.3s ease, z-index 0.3s ease; /* Transition for hover effect */
   transform: scale(0.9); /* Smaller by default */
+}
+@media (max-width: 768px) {
+  .testimonial-card {
+    min-width: 80%;
+  }
 }
 
 .testimonial-card:hover {
@@ -599,4 +611,84 @@ margin-bottom: 20px;
 }
 #contact{
   padding-top: 80px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  color: #00f7ff;
+  cursor: pointer;
+  z-index: 1001; /* Important so it stays above other things */
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navMenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 30px;
+    background-color: #141313;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    gap: 20px;
+  }
+
+  .navMenu.active {
+    display: flex;
+  }
+}
+
+/* Navbar responsiveness */
+@media (max-width: 768px) {
+  .navMenu {
+    display: none;
+    flex-direction: column;
+    background: #141313;
+    position: absolute;
+    top: 100px;
+    right: 30px;
+    width: 200px;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .navMenu.active {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+  .links {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  #testimonial{
+    height: auto;
+    margin-top: 600px;
+    margin-bottom: auto;
+  }
+  .typewriter {
+    font-size: 2em;
+  }
+  .hero button {
+    margin-top: 20px;
+  }
+  .flex-1 {
+    flex: 90%;
+  }
+  .carousel-container {
+    padding: 0 30px;
+  }
+  input[type=text], input[type=number], textarea, input[type=submit] {
+    width: 90%;
+  }
 }
