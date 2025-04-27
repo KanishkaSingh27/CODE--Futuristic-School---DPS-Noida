@@ -23,7 +23,6 @@ body {
   height: 2px;
 }
 
-/* Navbar Styles */
 .navbar {
   width: 100%;
   padding: 20px 50px;
@@ -71,7 +70,6 @@ body {
   color: #00f7ff;
 }
 
-/* DOT */
 .links .dot {
   position: absolute;
   bottom: -8px;
@@ -85,7 +83,6 @@ body {
   left: 0;
 }
 
-/* Dot Movement */
 .links a:hover ~ .dot {
   opacity: 1;
 }
@@ -104,7 +101,7 @@ body {
 }
 .hero {
   position: relative;
-  height: 70vh; /* Reduce height to pull everything up */
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,30 +109,30 @@ body {
   z-index: 2;
   text-align: center;
   font-family: "Share Tech Mono", monospace;
-  padding-top: 20px; /* Adjusted space for large font */
+  padding-top: 20px; 
 }
 
-/* Typewriter Text */
+
 .typewriter {
   display: inline-block;
   color: #00ffff;
-  font-size: 6em; /* Larger font size */
+  font-size: 6em; 
   overflow: hidden;
   white-space: nowrap;
   border-right: .15em solid #00ffff;
   animation: typing 4s steps(30, end) forwards, blink-caret 0.75s step-end infinite 4s;
-  margin: 0; /* Remove any default margin */
+  margin: 0; 
   margin-bottom: 100px;
   margin-top: 150px;
 }
 
-/* Typing Animation */
+
 @keyframes typing {
   from { width: 0; }
-  to { width: 27ch; } /* Adjust this based on the number of characters in your line */
+  to { width: 27ch; }
 }
 
-/* Cursor Animation */
+
 @keyframes blink-caret {
   from, to { border-color: transparent; }
   50% { border-color: #00ffff; }
@@ -217,18 +214,16 @@ button:active {
 }
 
 
-/* Wave Container */
 .wave-container {
   position: absolute;
-  bottom: 0; /* Position wave at the bottom */
+  bottom: 0;      
   width: 100%;
-  height: 250px; /* Adjust height of wave */
+  height: 250px; 
   overflow: hidden;
   z-index: 1;
  
 }
 
-/* Wave Path Styles */
 svg {
   position: absolute;
   top: 50%;
@@ -424,17 +419,17 @@ flex: calc(33.333% - 24px);
 .carousel {
   display: flex;
   gap: 50px;
-  overflow-x: auto; /* Hide the scrollbar */
+  overflow-x: auto; 
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  justify-content: center; /* Center the content */
+  justify-content: center; 
   scroll-behavior: smooth;
   gap: 20px;
   scroll-snap-type: x mandatory;
 }
 
 .testimonial-card {
-  flex: 0 0 20%; /* Adjust card width */
+  flex: 0 0 20%; 
   background-color: #E3E7D3;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -443,8 +438,8 @@ flex: calc(33.333% - 24px);
   min-width:300px;
   scroll-snap-align: center;
   
-  transition: transform 0.3s ease, z-index 0.3s ease; /* Transition for hover effect */
-  transform: scale(0.9); /* Smaller by default */
+  transition: transform 0.3s ease, z-index 0.3s ease; 
+  transform: scale(0.9); 
 }
 @media (max-width: 768px) {
   .testimonial-card {
@@ -453,12 +448,12 @@ flex: calc(33.333% - 24px);
 }
 
 .testimonial-card:hover {
-  transform: scale(1.03); /* Grow card when hovered */
+  transform: scale(1.03); 
 }
 
 .carousel .testimonial-card.active {
-  transform: scale(1.2); /* Centered card will be larger */
-  z-index: 2; /* Bring the centered card above others */
+  transform: scale(1.2); 
+  z-index: 2; 
 }
 
 .testimonial-text {
@@ -479,12 +474,11 @@ p {
   color: #777;
 }
 
-/* Hide Scrollbar */
+
 .carousel::-webkit-scrollbar {
   display: none;
 }
 
-/* Carousel arrows */
 .carousel-arrow {
   position: absolute;
   top: 50%;
@@ -508,7 +502,7 @@ p {
   right: 50px;
 }
 
-/* Responsiveness */
+
 @media (max-width: 1024px) {
   .testimonial-card {
     flex: 0 0 45%;
@@ -618,7 +612,7 @@ margin-bottom: 20px;
   font-size: 30px;
   color: #00f7ff;
   cursor: pointer;
-  z-index: 1001; /* Important so it stays above other things */
+  z-index: 1001; 
 }
 
 @media (max-width: 768px) {
@@ -644,7 +638,7 @@ margin-bottom: 20px;
   }
 }
 
-/* Navbar responsiveness */
+
 @media (max-width: 768px) {
   .navMenu {
     display: none;
@@ -669,7 +663,7 @@ margin-bottom: 20px;
   }
 }
 
-/* Mobile Adjustments */
+
 @media (max-width: 768px) {
   #testimonial{
     height: auto;
